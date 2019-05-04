@@ -1,12 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const convertTemp = (temp, metric) => {
-  const calc = !metric
-    ? (temp - 273.15) * 1.8 + 32
-    : temp - 273.15;
-  return Math.round(calc);
-}
+import convertTemp from '../utils/convertTemp';
 
 const Weather = ({ data, unit, metric }) => (
   <div className='weather'>
