@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Switch = ({ submit, change }) => (
+const Form = ({ submit, change }) => (
   <form onSubmit={submit}>
     <input
       className='city-field u-full-width'
@@ -13,9 +13,9 @@ const Switch = ({ submit, change }) => (
   </form>
 );
 
-Switch.propTypes = {
+Form.propTypes = {
   submit: PropTypes.func,
-  change: PropTypes.string,
+  change: PropTypes.func,
 }
 
-export default Switch;
+export default Form;
