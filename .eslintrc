@@ -12,7 +12,6 @@
     "plugin:import/warnings"
   ],
   "rules": {
-    "no-console": 1,
     "jsx-quotes": ["error", "prefer-single"]
   }
 }

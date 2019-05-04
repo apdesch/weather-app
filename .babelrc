@@ -4,9 +4,8 @@
       "@babel/preset-env",
       {
         "targets": {
-          "browsers": ["> 0.25%"]
-        },
-        "useBuiltIns": "usage"
+          "browsers": ["> 0.25%", "ie 11"]
+        }
       }
     ],
     "@babel/preset-react"
