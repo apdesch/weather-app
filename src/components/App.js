@@ -15,12 +15,8 @@ const App = () => {
 
   const updateCity = (event) => {
     event.preventDefault();
-    const city = event
-      .target
-      .firstChild
-      .value
-      .replace(/\s+/g, '+')
-      .toLowerCase();
+    const { value } = event.target.firstChild;
+    const city = value.replace(/\s+/g, '+').toLowerCase();
     setCity(city);
   };
 
