@@ -9,7 +9,7 @@ const Switch = ({ toggle }) => (
 );
 
 Switch.propTypes = {
-  toggle: PropTypes.bool,
+  toggle: PropTypes.func,
 }
 
 export default Switch;
