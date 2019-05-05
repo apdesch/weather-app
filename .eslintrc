@@ -24,7 +24,7 @@
     ],
     "comma-dangle": ["error", "only-multiline"],
     "object-curly-spacing": ["error", "always"],
-    "array-bracket-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
     "arrow-spacing": ["error", { "before": true, "after": true }],
     "comma-spacing": ["error", { "before": false, "after": true }],
     "arrow-body-style": ["error", "as-needed"],
