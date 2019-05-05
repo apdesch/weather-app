@@ -13,7 +13,7 @@ const App = () => {
 
   const switchUnit = () => setMetric(prevUnit => !prevUnit);
 
-  const updateCity = (event) => {
+  const updateCity = event => {
     event.preventDefault();
     const { value } = event.target.firstChild;
     const city = value.replace(/\s+/g, '+').toLowerCase();
@@ -31,6 +31,6 @@ const App = () => {
         weather && <Weather data={data} unit={unit} metric={metric} />}
     </div>
   );
-}
+};
 
 export default App;

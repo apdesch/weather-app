@@ -14,11 +14,11 @@ const useFetch = (url, param = '') => {
     } catch (error) {
       setError(error);
     }
-  }
+  };
 
   useEffect(() => { fetchData(); }, [param]);
 
-  return { data, loading, error }
+  return { data, loading, error };
 };
 
 export default useFetch;

@@ -14,6 +14,6 @@ const Form = ({ submit }) => (
 
 Form.propTypes = {
   submit: PropTypes.func,
-}
+};
 
 export default Form;
