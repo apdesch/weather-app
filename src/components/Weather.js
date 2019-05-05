@@ -19,6 +19,6 @@ Weather.propTypes = {
   data: PropTypes.shape(),
   unit: PropTypes.string.isRequired,
   metric: PropTypes.bool,
-}
+};
 
 export default Weather;

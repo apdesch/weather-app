@@ -39,7 +39,7 @@ export default class App extends Component {
     }
   }
   switchUnit() {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       metric: !prevState.metric,
     }));
   }
