@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const fetch = require('node-fetch');
 const express = require('express');
 const webpack = require('webpack');
@@ -7,6 +6,7 @@ const history = require('connect-history-api-fallback');
 const config = require('./webpack.config');
 
 const PORT = process.env.PORT || 3000;
+const APPID = process.env.OW_API_KEY || ''; // Valid OpenWeather api key
 const app = express();
 const compiler = webpack(config);
 const instance = middleware(compiler);
@@ -21,7 +21,7 @@ app
       .catch(error => res.json({ error }));
   })
   .get('/api/weather/:city', (req, res) => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${req.params.city}&APPID=${process.env.OWM_API_KEY || ''}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${req.params.city}&APPID=${APPID}`)
       .then(r => r.json())
       .then(data => res.json(data))
       .catch(error => res.json({ error }));
