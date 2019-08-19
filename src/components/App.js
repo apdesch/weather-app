@@ -7,7 +7,7 @@ import useFetch from '../hooks/useFetch';
 const App = () => {
   const [city, setCity] = useState('');
   const [metric, setMetric] = useState(false);
-  const { data, loading, error } = useFetch('api/weather/', city);
+  const { data, loading, error } = useFetch('api/weather/', city, [city]);
   const { message, weather } = data;
   const unit = metric ? 'C' : 'F';
 
