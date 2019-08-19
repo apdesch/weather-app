@@ -44,19 +44,6 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.less$/,
-        use: [
-          { loader: 'style-loader' },
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-            },
-          },
-          { loader: 'less-loader' },
-        ],
-      },
-      {
         test: /\.(md|txt)$/,
         use: 'raw-loader',
       },
