@@ -5,13 +5,13 @@ const middleware = require('webpack-dev-middleware');
 const history = require('connect-history-api-fallback');
 const config = require('./webpack.config');
 
+require('dotenv').config();
+
 const PORT = process.env.PORT || 3000;
 const APPID = process.env.OW_API_KEY || ''; // Valid OpenWeather api key
 const app = express();
 const compiler = webpack(config);
 const instance = middleware(compiler);
-
-require('dotenv').config();
 
 app
   .get('/api/weather', (req, res) => {
